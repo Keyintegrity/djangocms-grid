@@ -33,8 +33,6 @@ setup(
     url='https://github.com/divio/djangocms-grid',
     packages=[
         'djangocms_grid',
-        'djangocms_grid.migrations',
-        'djangocms_grid.south_migrations'
     ],
     install_requires=INSTALL_REQUIRES,
     license='LICENSE.txt',
