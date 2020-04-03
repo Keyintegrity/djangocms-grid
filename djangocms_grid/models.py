@@ -3,7 +3,6 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 from cms.models import CMSPlugin
-from cms.utils.compat.dj import python_2_unicode_compatible
 
 
 GRID_CONFIG = {'COLUMNS': 24, 'TOTAL_WIDTH': 960, 'GUTTER': 20}
@@ -14,7 +13,6 @@ DJANGOCMS_GRID_CHOICES = [
 ]
 
 
-@python_2_unicode_compatible
 class Grid(CMSPlugin):
     inner = models.BooleanField(
         _('inner'), default=True,
@@ -28,7 +26,6 @@ class Grid(CMSPlugin):
         return _("%s columns") % self.cmsplugin_set.all().count()
 
 
-@python_2_unicode_compatible
 class GridColumn(CMSPlugin):
     size = models.CharField(
         _('size'), choices=DJANGOCMS_GRID_CHOICES, default='1', max_length=50)
