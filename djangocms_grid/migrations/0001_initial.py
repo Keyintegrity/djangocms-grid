@@ -24,7 +24,7 @@ class Migration(migrations.Migration):
             name='GridColumn',
             fields=[
                 ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
-                ('size', models.CharField(default=b'1', max_length=50, verbose_name='size', choices=[(b'1', b'grid-1'), (b'2', b'grid-2'), (b'3', b'grid-3'), (b'4', b'grid-4'), (b'5', b'grid-5'), (b'6', b'grid-6'), (b'7', b'grid-7'), (b'8', b'grid-8'), (b'9', b'grid-9'), (b'10', b'grid-10'), (b'11', b'grid-11'), (b'12', b'grid-12'), (b'13', b'grid-13'), (b'14', b'grid-14'), (b'15', b'grid-15'), (b'16', b'grid-16'), (b'17', b'grid-17'), (b'18', b'grid-18'), (b'19', b'grid-19'), (b'20', b'grid-20'), (b'21', b'grid-21'), (b'22', b'grid-22'), (b'23', b'grid-23'), (b'24', b'grid-24')])),
+                ('size', models.CharField(default='1', max_length=50, verbose_name='size', choices=[('1', 'grid-1'), ('2', 'grid-2'), ('3', 'grid-3'), ('4', 'grid-4'), ('5', 'grid-5'), ('6', 'grid-6'), ('7', 'grid-7'), ('8', 'grid-8'), ('9', 'grid-9'), ('10', 'grid-10'), ('11', 'grid-11'), ('12', 'grid-12'), ('13', 'grid-13'), ('14', 'grid-14'), ('15', 'grid-15'), ('16', 'grid-16'), ('17', 'grid-17'), ('18', 'grid-18'), ('19', 'grid-19'), ('20', 'grid-20'), ('21', 'grid-21'), ('22', 'grid-22'), ('23', 'grid-23'), ('24', 'grid-24')])),
                 ('custom_classes', models.CharField(max_length=200, verbose_name='custom classes', blank=True)),
             ],
             options={
