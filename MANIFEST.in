@@ -1,5 +1,6 @@
 include LICENSE.txt
 include README.rst
 recursive-include djangocms_grid/locale *
+recursive-include djangocms_grid/migrations *
 recursive-include djangocms_grid/templates *
 recursive-exclude * *.pyc
