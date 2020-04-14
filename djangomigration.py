@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-# -*- coding: utf-8 -*-
 import sys
 
 INSTALLED_APPS = [
@@ -12,7 +11,6 @@ INSTALLED_APPS = [
     'cms',
     'menus',
     'djangocms_grid',
-    'south',
 ]
 
 DATABASES = {
@@ -71,6 +69,7 @@ def djangomigration():
     argv.insert(2, 'djangocms_grid')
     utility = ManagementUtility(argv)
     utility.execute()
+
 
 if __name__ == "__main__":
     djangomigration()

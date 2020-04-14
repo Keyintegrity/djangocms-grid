@@ -1,7 +1,3 @@
-# -*- coding: utf-8 -*-
-
-from __future__ import unicode_literals
-
 from django.utils.translation import ugettext_lazy as _
 
 from cms.models import CMSPlugin
@@ -32,7 +28,7 @@ class GridPlugin(CMSPluginBase):
     def save_model(self, request, obj, form, change):
         response = super(GridPlugin, self).save_model(request, obj, form,
                                                       change)
-        for x in xrange(int(form.cleaned_data['create'])):
+        for x in range(int(form.cleaned_data['create'])):
             col = GridColumn(
                 parent=obj, placeholder=obj.placeholder, language=obj.language,
                 size=form.cleaned_data['create_size'],
@@ -58,6 +54,7 @@ class GridColumnPlugin(CMSPluginBase):
                       int(instance.size) - GRID_CONFIG['GUTTER'])
         })
         return context
+
 
 plugin_pool.register_plugin(GridPlugin)
 plugin_pool.register_plugin(GridColumnPlugin)
