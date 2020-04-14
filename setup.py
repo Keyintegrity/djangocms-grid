@@ -4,7 +4,7 @@ from djangocms_grid import __version__
 
 
 INSTALL_REQUIRES = [
-    'django>=1.11,<3.0',
+    'Django>=1.11,<3.0',
     'django-cms>=3.0,<4.0',
 ]
 
